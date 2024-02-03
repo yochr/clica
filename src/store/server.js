@@ -34,7 +34,7 @@ export async function getMeetings() {
 
 export async function setMeetings(name, date){
 try {
-  const res = await axios.post('http://localhost:8787/appointment',{"name":name,"date":date} );
+  const res = await axios.post('http://localhost:8787/appointment',{"name":name,"dateTime":date} );
     return "success";
   
 } catch (error) {

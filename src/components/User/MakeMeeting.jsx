@@ -7,8 +7,8 @@ const ButtonMakeMeeting =()=> {
         setIsClicked(true)
     }
    
-  return (  <>
-    <button variant="inherit" aria-label="add" onClick={handleClick}>
+  return (<>
+    <button onClick={handleClick}>
         <h3>לקביעת פגישה</h3>
     </button>
     {isClicked && <FormMakeMeeting setIsClicked={setIsClicked}/>}
