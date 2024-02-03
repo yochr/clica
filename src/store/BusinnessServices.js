@@ -1,7 +1,7 @@
 import{makeObservable, observable, action} from "mobx";
 
 class BusinnessServices{
-    servicesList=[];
+    servicesList=[1,2,3];
     
     constructor()
     {
@@ -12,8 +12,7 @@ class BusinnessServices{
     }
 
     setServices=(s)=>{
-        this.servicesList = s;
-        console.log(this.servicesList);
+        this.servicesList = [...s];
     }
 }
 export default new BusinnessServices();
