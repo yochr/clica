@@ -2,14 +2,14 @@ import {Button, TextField } from "@mui/material"
 import React, { useState, useEffect } from 'react';
 import { observer } from "mobx-react";
 import SaveChanges from "./SaveChanges‏ ";
-import MultipleSelect from "./ServicesList";
+import SelectService from "./ServicesList";
 const NewForm =(observer(()=>{
     const [date, setDate] = useState("0000-00-00");
 
 
 return (
 <>
-<MultipleSelect/>
+<SelectService/>
 <TextField
     id="outlined-basic"
     label="תאריך"
