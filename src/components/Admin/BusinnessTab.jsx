@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Services from '../Services/service';
 import BusinessDetails from '../BussnesData/BusinessDetails';
 import BusinnessServices from '../../store/BusinnessServices';
+import Meetings from '../Meetings/Meeting';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,7 +58,7 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}  >
-        הפגישות שלי
+        <Meetings/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1} >
         <Services/>

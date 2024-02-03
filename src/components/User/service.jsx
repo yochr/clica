@@ -4,10 +4,10 @@ import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import BusinnessServices from '../../store/BusinnessServices';
-import AddMeeting from './AddMeeting';
 import { observer } from 'mobx-react';
+import ButtonMakeMeeting from './MakeMeeting';
 
-const Meetings =(observer(()=>{
+const Services =(observer(()=>{
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = BusinnessServices.servicesList.length-2;
   const handleNext = () => { setActiveStep((prevActiveStep) => prevActiveStep + 1)};
@@ -37,9 +37,9 @@ const Meetings =(observer(()=>{
         <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1} >
           Next <KeyboardArrowRight /> </Button>
       </Box>
-      <br/> <AddMeeting/>
+      <ButtonMakeMeeting/>
       </Box>
     );
   }))
-export default  Meetings;  
+export default  Services;  
   

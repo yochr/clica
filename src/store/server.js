@@ -1,9 +1,10 @@
 import axios from 'axios';
 import  BusinnessServices from './BusinnessServices.js';
 import AdminEdit from './AdminEdit.js';
+import Meetings from './Meetings.js';
 
 
- export async function getServices() {
+export async function getServices() {
     try {
         const services = await axios.get('http://localhost:8787/services');
         BusinnessServices.setServices(services.data);
@@ -20,6 +21,25 @@ export async function setServices(name, description, cost){
   } catch (error) {
     alert("there is a service in this name");
   }
+}
+
+export async function getMeetings() {
+  try {
+      const meetings = await axios.get('http://localhost:8787/appointments');
+      Meetings.setMeetings(meetings.data);
+      console.log(meetings.data);
+  } catch (error) {
+  }     
+}
+
+export async function setMeetings(name, date){
+try {
+  const res = await axios.post('http://localhost:8787/appointment',{"name":name,"date":date} );
+    return "success";
+  
+} catch (error) {
+  alert("this date is not valid");
+}
 }
 
 export async function getBusinessData() {

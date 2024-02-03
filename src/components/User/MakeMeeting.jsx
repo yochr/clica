@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
-import FormAddMeeting from './formAddMeeting';
+import FormMakeMeeting from './formMakeMeeting';
 
-const AddMeeting =()=> {
+const ButtonMakeMeeting =()=> {
     const [isClicked, setIsClicked] = useState(false);
     const handleClick=()=>{
         setIsClicked(true)
@@ -14,9 +14,9 @@ const AddMeeting =()=> {
     <Fab color="primary" aria-label="add" onClick={handleClick}>
         <AddIcon />
     </Fab>
-    {isClicked && <FormAddMeeting setIsClicked={setIsClicked}/>}
+    {isClicked && <FormMakeMeeting setIsClicked={setIsClicked}/>}
     </>)
     
 };
 
-export default AddMeeting;
+export default ButtonMakeMeeting;
