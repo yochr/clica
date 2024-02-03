@@ -1,6 +1,4 @@
 import React,{useState} from 'react';
-import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
 import FormMakeMeeting from './formMakeMeeting';
 
 const ButtonMakeMeeting =()=> {
@@ -10,10 +8,9 @@ const ButtonMakeMeeting =()=> {
     }
    
   return (  <>
-    {/* {isClicked && <FormAddService />} */}
-    <Fab color="primary" aria-label="add" onClick={handleClick}>
-        <AddIcon />
-    </Fab>
+    <button variant="inherit" aria-label="add" onClick={handleClick}>
+        <h3>לקביעת פגישה</h3>
+    </button>
     {isClicked && <FormMakeMeeting setIsClicked={setIsClicked}/>}
     </>)
     
