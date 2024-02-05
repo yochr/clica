@@ -1,4 +1,4 @@
-import {Button } from "@mui/material"
+import {Button, TextField } from "@mui/material"
 import React, { useState } from 'react';
 import { observer } from "mobx-react";
 import dayjs from 'dayjs';
@@ -17,6 +17,8 @@ import BusinnessServices from '../../store/BusinnessServices';
 const NewForm =(observer(()=>{
 
   const [date, setDate] = useState(dayjs('2024-02-03T00:00'));
+  const [customerName, setCustomerName] = useState("");
+  const [phone, setPhone] = useState("");
   const [chosenService, setService] = React.useState('');
   const names = BusinnessServices.servicesList;
 
@@ -36,11 +38,29 @@ return (<>
         label="בחר תאריך" value={date}
         onChange={(newValue) => setDate(newValue)}/>
     </DemoContainer>
-</LocalizationProvider> <br/> <br/>
+</LocalizationProvider> <br/>
+
+<TextField
+      id="outlined-basic"
+      label="שם"
+      type="text"
+      value={customerName}
+      variant="filled"
+      color="secondary"
+      onChange={(e) => setCustomerName(e.target.value)}/> <br/> <br/>
+
+<TextField
+      id="outlined-basic"
+      label="פלאפון"
+      type="text"
+      value={phone}
+      variant="filled"
+      color="secondary"
+      onChange={(e) => setPhone(e.target.value)}/> <br/> <br/>
 
 <Button
     variant="contained" color="secondary"
-    onClick={()=> SaveChanges(chosenService, date)}> אישור
+    onClick={()=> SaveChanges(chosenService, date, customerName, phone)}> אישור
 </Button>
 </>)
 }))

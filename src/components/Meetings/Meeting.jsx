@@ -3,13 +3,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import BusinnessServices from '../../store/BusinnessServices';
+import Meetings from '../../store/Meetings';
 import AddMeeting from './AddMeeting';
 import { observer } from 'mobx-react';
 
-const Meetings =(observer(()=>{
+const Meeting =(observer(()=>{
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = BusinnessServices.servicesList.length-2;
+  const maxSteps = Meetings.meetingsList;
   const handleNext = () => { setActiveStep((prevActiveStep) => prevActiveStep + 1)};
   const handleBack = () => { setActiveStep((prevActiveStep) => prevActiveStep - 1)};
 
@@ -20,19 +20,7 @@ const Meetings =(observer(()=>{
           <KeyboardArrowLeft /> Back </Button>
 
         <Box sx={{width: '20%'}}>
-          {BusinnessServices.servicesList[activeStep].name} <br/>
-          {BusinnessServices.servicesList[activeStep].description} <br/>
-          {BusinnessServices.servicesList[activeStep].cost} </Box>
-
-        <Box sx={{width: '20%'}}>
-          {BusinnessServices.servicesList[activeStep+1].name} <br/>
-          {BusinnessServices.servicesList[activeStep+1].description} <br/>
-          {BusinnessServices.servicesList[activeStep+1].cost} </Box>
-
-        <Box sx={{width: '20%'}}>
-          {BusinnessServices.servicesList[activeStep+2].name} <br/>
-          {BusinnessServices.servicesList[activeStep+2].description} <br/>
-          {BusinnessServices.servicesList[activeStep+2].cost} </Box>
+              {Meetings.meetingsList[activeStep].name} </Box>
   
         <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1} >
           Next <KeyboardArrowRight /> </Button>
@@ -41,5 +29,5 @@ const Meetings =(observer(()=>{
       </Box>
     );
   }))
-export default  Meetings;  
+export default  Meeting;  
   

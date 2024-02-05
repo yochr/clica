@@ -1,7 +1,7 @@
 import{makeObservable, observable, action} from "mobx";
 
 class Meetings{
-    meetingsList=[1,2,3];
+    meetingsList=[];
     
     constructor()
     {
@@ -13,6 +13,8 @@ class Meetings{
 
     setMeetings=(s)=>{
         this.meetingsList = [...s];
+        console.log(this.meetingsList[0].service);
+
     }
 }
 export default new Meetings();

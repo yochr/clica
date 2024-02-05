@@ -8,6 +8,7 @@ import Services from '../Services/service';
 import BusinessDetails from '../BussnesData/BusinessDetails';
 import BusinnessServices from '../../store/BusinnessServices';
 import Meetings from '../Meetings/Meeting';
+import MeetingTable from '../Meetings/MeetingTable';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -58,7 +59,7 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}  >
-        <Meetings/>
+        <MeetingTable/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1} >
         <Services/>

@@ -32,9 +32,9 @@ export async function getMeetings() {
   }     
 }
 
-export async function setMeetings(name, date){
+export async function setMeetings(service, date, name, phone){
 try {
-  const res = await axios.post('http://localhost:8787/appointment',{"name":name,"dateTime":date} );
+  const res = await axios.post('http://localhost:8787/appointment',{"service":service,"dateTime":date, "name": name, "phone": phone} );
     return "success";
   
 } catch (error) {
