@@ -13,7 +13,6 @@ class Meetings{
 
     setMeetings=(s)=>{
         this.meetingsList = [...s];
-        console.log(this.meetingsList[0].service);
 
     }
 }

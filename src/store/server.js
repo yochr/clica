@@ -8,7 +8,6 @@ export async function getServices() {
     try {
         const services = await axios.get('http://localhost:8787/services');
         BusinnessServices.setServices(services.data);
-        console.log(services.data);
     } catch (error) {
     }     
  }
@@ -27,7 +26,6 @@ export async function getMeetings() {
   try {
       const meetings = await axios.get('http://localhost:8787/appointments');
       Meetings.setMeetings(meetings.data);
-      console.log(meetings.data);
   } catch (error) {
   }     
 }
