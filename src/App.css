@@ -44,3 +44,7 @@
 #textAdmin{
   text-align: right;
 }
+
+.red input{
+  color: red;
+}
