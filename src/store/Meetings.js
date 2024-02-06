@@ -2,7 +2,7 @@ import{makeObservable, observable, action} from "mobx";
 
 class Meetings{
     meetingsList=[];
-    
+
     constructor()
     {
         makeObservable(this,{
@@ -13,8 +13,7 @@ class Meetings{
 
     setMeetings=(s)=>{
         this.meetingsList = [...s];
-        console.log(this.meetingsList[0].service);
-
+        this.meetingsList.sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime))
     }
 }
 export default new Meetings();

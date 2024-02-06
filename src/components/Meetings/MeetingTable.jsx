@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Meetings from '../../store/Meetings';
+import colorMeeting from './meetingColor';
 import { observer } from 'mobx-react';
 
   function createData(index, meeting) {
@@ -19,10 +20,11 @@ const BasicTable =(observer(()=>{
 
   const rows = Array.from({length: Meetings.meetingsList.length }, (_, index) => {
     return createData(index, Meetings.meetingsList[index]); });
+    let c ="red"
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 650}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell> טל' ליצירת קשר</TableCell>
@@ -32,15 +34,13 @@ const BasicTable =(observer(()=>{
             <TableCell align="right">מס' פגישה</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody sx={{}} >
           {rows.map((row) => (
             <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell align='right'>
-                {row.phone}
-              </TableCell>
+              key={row.index}
+              {...c = colorMeeting(row.date)}
+              sx={{ '&:last-child td, &:last-child th': { border: 0}, backgroundColor: c }}>
+              <TableCell align='right'> {row.phone} </TableCell>
               <TableCell align="right">{row.name}</TableCell>
               <TableCell align="right">{row.service}</TableCell>
               <TableCell align="right">{row.date}</TableCell>
