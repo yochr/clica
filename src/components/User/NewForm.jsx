@@ -16,11 +16,17 @@ import BusinnessServices from '../../store/BusinnessServices';
 
 const NewForm =(observer(()=>{
 
+  
   const [date, setDate] = useState(dayjs('2024-02-03T00:00'));
   const [customerName, setCustomerName] = useState("");
   const [phone, setPhone] = useState("");
   const [chosenService, setService] = React.useState('');
   const names = BusinnessServices.servicesList;
+
+  const handleClick = () =>{
+    SaveChanges(chosenService, date, customerName, phone)
+
+  }
 
 return (<>
 <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
@@ -35,12 +41,14 @@ return (<>
 <LocalizationProvider dateAdapter={AdapterDayjs}>
     <DemoContainer components={['DateTimePicker']}>
       <DateTimePicker
+        error
         label="בחר תאריך" value={date}
         onChange={(newValue) => setDate(newValue)}/>
     </DemoContainer>
 </LocalizationProvider> <br/>
 
 <TextField
+      error
       id="outlined-basic"
       label="שם"
       type="text"
@@ -60,7 +68,7 @@ return (<>
 
 <Button
     variant="contained" color="secondary"
-    onClick={()=> SaveChanges(chosenService, date, customerName, phone)}> אישור
+    onClick={()=>  handleClick()}> אישור
 </Button>
 </>)
 }))

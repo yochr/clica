@@ -33,10 +33,10 @@ export async function getMeetings() {
 export async function setMeetings(service, date, name, phone){
 try {
   const res = await axios.post('http://localhost:8787/appointment',{"service":service,"dateTime":date, "name": name, "phone": phone} );
-    return "success";
+    return "הפגישה נקבע בהצלחה";
   
 } catch (error) {
-  alert("this date is not valid");
+  return "הזמן שבחרת תפוס - בחר מחדש";
 }
 }
 
