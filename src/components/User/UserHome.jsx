@@ -1,7 +1,8 @@
 import React from "react"
 import { observer } from "mobx-react"
 import HomeUp from '../Login/HomeUp'
-import Services from './service'
+import SwitchService from "../Services/switchLength"
+import ButtonMakeMeeting from "./MakeMeeting"
 
 const UserHome = (observer(() => {
 
@@ -9,7 +10,9 @@ const UserHome = (observer(() => {
     <>
         <HomeUp/>
         <h2>שרותים</h2>
-        <Services/>
+        <SwitchService/>
+        <br/>
+        <ButtonMakeMeeting/>
     </>
   )
 }))

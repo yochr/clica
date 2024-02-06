@@ -9,7 +9,7 @@ import { observer } from 'mobx-react';
 
 const Services2 =(observer(()=>{ 
     return (    
-<Box sx={{ width: '80vw', display: 'flex', justifyContent:'space-between' }}>
+<Box sx={{ width: '80vw', display: 'flex', justifyContent:'space-evenly' }}>
         <Box sx={{width: '20%'}}>
           {BusinnessServices.servicesList[0].name} <br/>
           {BusinnessServices.servicesList[0].description} <br/>
