@@ -16,7 +16,6 @@ import { observer } from 'mobx-react';
     const phone = meeting.phone;
   return { index, date, service, name, phone }; }
 const BasicTable =(observer(()=>{
-  const sample = Meetings.meetingsList;
 
   const rows = Array.from({length: Meetings.meetingsList.length }, (_, index) => {
     return createData(index, Meetings.meetingsList[index]); });

@@ -4,11 +4,11 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Services from '../Services/service';
-import BusinessDetails from '../BussnesData/BusinessDetails';
-import BusinnessServices from '../../store/BusinnessServices';
-import Meetings from '../Meetings/Meeting';
+import Services from '../Services/service3+';
 import MeetingTable from '../Meetings/MeetingTable';
+import SwitchService from '../Services/switchLength';
+import BusinnessServices from '../../store/BusinnessServices';
+import ButtonAddService from '../Services/AddService';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,8 +62,8 @@ export default function BasicTabs() {
         <MeetingTable/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1} >
-        <Services/>
-        
+        <SwitchService/>
+        <ButtonAddService/>
       </CustomTabPanel>
 
     </Box>

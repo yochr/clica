@@ -1,7 +1,7 @@
 import{makeObservable, observable, action} from "mobx";
 
 class BusinnessServices{
-    servicesList=[1,2,3];
+    servicesList=[];
     
     constructor()
     {
