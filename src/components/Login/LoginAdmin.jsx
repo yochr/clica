@@ -10,6 +10,8 @@ function LoginAdmin() {
 
     const handleLogin = () => {
         CheckLogin(username,password)
+        setUsername("")
+        setPassword("");
       };
 
   return (
