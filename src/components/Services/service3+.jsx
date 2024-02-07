@@ -23,17 +23,17 @@ const Services3 =(observer(()=>{
         <Button sx={{height: '8vh', color: 'orange', left: '10vw'}}size="small" onClick={handleBack} disabled={activeStep === 0}>  
           <ArrowBackIos fontSize='large'/> <ArrowBackIos fontSize='large' /></Button>
 
-        <Box>
+        <Box sx={{ width: '10vw', borderBlockEnd: 'solid 1px orange'}}>
           {BusinnessServices.servicesList[activeStep].name} <br/>
           {BusinnessServices.servicesList[activeStep].description} <br/>
           {BusinnessServices.servicesList[activeStep].cost} </Box>
 
-        <Box>
+        <Box sx={{ width: '10vw', borderBlockEnd: 'solid 1px orange'}}>
           {BusinnessServices.servicesList[activeStep+1].name} <br/>
           {BusinnessServices.servicesList[activeStep+1].description} <br/>
           {BusinnessServices.servicesList[activeStep+1].cost} </Box>
 
-        <Box>
+        <Box sx={{ width: '10vw', borderBlockEnd: 'solid 1px orange'}}>
           {BusinnessServices.servicesList[activeStep+2].name} <br/>
           {BusinnessServices.servicesList[activeStep+2].description} <br/>
           {BusinnessServices.servicesList[activeStep+2].cost} </Box>

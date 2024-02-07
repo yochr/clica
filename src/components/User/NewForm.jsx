@@ -1,4 +1,4 @@
-import {Button, TextField, colors, makeStyles } from "@mui/material"
+import {Button, TextField } from "@mui/material"
 import React, { useState } from 'react';
 import { observer } from "mobx-react";
 import dayjs from 'dayjs';
@@ -16,16 +16,13 @@ import BusinnessServices from '../../store/BusinnessServices';
 import dataStore from "../../Data/dataStore";
 
 const NewForm =(observer(()=>{
-
   
   const [date, setDate] = useState(dayjs('2024-02-03T00:00'));
   const [customerName, setCustomerName] = useState("");
   const [phone, setPhone] = useState("");
   const [chosenService, setService] = React.useState('');
   const names = BusinnessServices.servicesList;
-  const handleClick = () =>{
-    SaveChanges(chosenService, date, customerName, phone)
-  }
+  const handleClick = () =>{ SaveChanges(chosenService, date, customerName, phone)}
 
   let a= ""
   if (dataStore.isMakeMeeting == false) {  a = "red"}
@@ -34,7 +31,7 @@ const NewForm =(observer(()=>{
 return (<>
 <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
     <InputLabel  color="warning">שם השרות</InputLabel>
-    <Select
+    <Select 
        value={chosenService} label="שם השרות" color="warning"
        onChange={(event) => setService(event.target.value)}>
        {names.map((name) => (<MenuItem key={name} value={name.name}> {name.name} </MenuItem> ))}
@@ -44,34 +41,23 @@ return (<>
 <LocalizationProvider dateAdapter={AdapterDayjs}>
     <DemoContainer components={['DateTimePicker']}>
       <DateTimePicker
-        id ="makeDate" label="בחר תאריך" value={date} 
-        className={a}
+        id ="makeDate" label="בחר תאריך" value={date} className={a}
         onChange={(newValue) => setDate(newValue)}/>
-    </DemoContainer>
+      </DemoContainer>
 </LocalizationProvider> <br/>
 
 <TextField
-      id="outlined-basic"
-      label="שם"
-      type="text"
-      value={customerName}
-      variant="filled"
-      color="warning"
-      onChange={(e) => setCustomerName(e.target.value)}/> <br/> <br/>
-
+      id="outlined-basic" variant="filled" type="text" color="warning"
+      value={customerName} label="שם" 
+      onChange={(e) => setCustomerName(e.target.value)}/>
+<br/><br/>
 <TextField
-      id="outlined-basic"
-      label="פלאפון"
-      type="text"
-      value={phone}
-      variant="filled"
-      color="warning"
-      onChange={(e) => setPhone(e.target.value)}/> <br/> <br/>
+      id="outlined-basic" type="text" variant="filled" color="warning"
+      label="פלאפון" value={phone}
+      onChange={(e) => setPhone(e.target.value)}/>
+<br/><br/>
+<Button variant="contained" color="warning" onClick={()=> handleClick()}> אישור </Button>
 
-<Button
-    variant="contained" color="warning"
-    onClick={()=> handleClick()}> אישור
-</Button>
 </>)
 }))
 export default NewForm

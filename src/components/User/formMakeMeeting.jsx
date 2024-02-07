@@ -4,10 +4,8 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
 import NewForm from './NewForm';
-// import NewForm from './newForm';
 
 export default function FormMakeMeeting({setIsClicked}) {
-
     const handleClose = () => {
       setIsClicked(false);
   };
@@ -23,7 +21,7 @@ export default function FormMakeMeeting({setIsClicked}) {
         </DialogTitle>
 
         <DialogActions>
-          <Button onClick={handleClose}>סגור</Button>
+          <Button onClick={handleClose} sx={{color: 'orange'}}>סגור</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>

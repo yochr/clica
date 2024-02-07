@@ -4,9 +4,7 @@ import HomeUp from '../Login/HomeUp'
 import SwitchService from "../Services/switchLength"
 import ButtonMakeMeeting from "./MakeMeeting"
 import { useState, useEffect } from 'react';
-import BusinnessServices from "../../store/BusinnessServices"
-import { getServices } from "../../store/server"
-import { Box, Button } from "@mui/material"
+import { Box } from "@mui/material"
 import AdminEdit from "../../store/AdminEdit"
 
 const UserHome = (observer(() => {
@@ -16,14 +14,7 @@ const UserHome = (observer(() => {
     console.log(name)
   }
 
-// function fun() {
-//   let now1= clock();
-//   return now1;
-// }
-
 setInterval(update, 100000)
-
-
 
   return (
     <>
@@ -39,8 +30,6 @@ setInterval(update, 100000)
         </Box>        
     </>
   )
-  
-
 }))
 
 export default UserHome
