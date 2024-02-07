@@ -8,23 +8,35 @@ import Services from '../Services/service3+';
 import MeetingTable from '../Meetings/MeetingTable';
 import SwitchService from '../Services/switchLength';
 import ButtonAddService from '../Services/AddService';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function CustomTabPanel(props) {
   const { children, value, index } = props;
 
   return (
     <div hidden={value !== index}> 
-      {value === index && (<Box sx={{ p: 3 }}> {children} </Box>)}
+      {value === index && (<Box sx={{ p: 7 }}> {children} </Box>)}
     </div>
   );
 }
 
 export default function BasicTabs() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const navigate = useNavigate();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    // if(newValue == 0)
+    // {
+    //   navigate("meetings")
+
+    // }
+    // else{
+    //   navigate("services")
+    // }
   };
+
 
   return (
     <Box sx={{ width: '100vw', height: '50vh'}}>
@@ -41,6 +53,7 @@ export default function BasicTabs() {
         <ButtonAddService/>
       </CustomTabPanel>
     </Box>
+    
 
   );
 }

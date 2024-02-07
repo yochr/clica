@@ -13,6 +13,7 @@ const AdminPage = (observer(() => {
         <>
             <HomeUp/>
             {!dataStore.isLogin ? <LoginAdmin /> :<><AdminHome /></>   }
+            <Outlet/>
         </>
     )
 }))

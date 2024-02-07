@@ -36,7 +36,7 @@ const BasicTable =(observer(()=>{
     let c ="red"
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper}  sx={{overflow: 'auto', height: '40vh'}}>
       <Table sx={{ minWidth: 650}} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -47,7 +47,7 @@ const BasicTable =(observer(()=>{
             <TableCell align="right">מס' פגישה</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody sx={{}} >
+        <TableBody sx={{overflow: 'auto', height: '10px'}}>
           {rows.map((row) => (
             <TableRow
               key={row.index}
