@@ -22,7 +22,7 @@ export default function EditBusinessDetails({setOpen}) {
         </DialogTitle>
 
         <DialogActions>
-          <Button onClick={handleClose}>סגור</Button>
+          <Button onClick={handleClose} sx={{color: 'orange'}}>סגור</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
