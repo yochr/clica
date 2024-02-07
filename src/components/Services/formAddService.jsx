@@ -23,7 +23,7 @@ export default function FormAddService({setIsClicked}) {
         </DialogTitle>
 
         <DialogActions>
-          <Button onClick={handleClose}>סגור</Button>
+          <Button onClick={handleClose} sx={{color: 'orange'}}>סגור</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
