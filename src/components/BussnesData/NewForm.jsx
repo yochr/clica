@@ -18,7 +18,7 @@ label="שם העסק"
 type="text"
 value={Bname}
 variant="filled"
-color="secondary"
+color="warning"
 onChange={(e) => setBname(e.target.value)}
 />
 <TextField
@@ -27,7 +27,7 @@ onChange={(e) => setBname(e.target.value)}
     type="text"
     value={Baddress}
     variant="filled"
-    color="secondary"
+    color="warning"
     onChange={(e) => setBaddress(e.target.value)}
 />
 <br/>
@@ -38,7 +38,7 @@ onChange={(e) => setBname(e.target.value)}
       type="text"
       value={Bphone}
       variant="filled"
-      color="secondary"
+      color="warning"
       onChange={(e) => setBphone(e.target.value)}
 />
 <TextField
@@ -47,14 +47,14 @@ onChange={(e) => setBname(e.target.value)}
       type="email"
       value={Bemail}
       variant="filled"
-      color="secondary"
+      color="warning"
       onChange={(e) => setBemail(e.target.value)}
 />
 <br/>
 <br/>
 <Button
     variant="contained"
-    color="secondary"
+    color="warning"
     onClick={()=> SaveChanges(Bname, Baddress, Bphone, Bemail)}>
     אישור
 </Button>
