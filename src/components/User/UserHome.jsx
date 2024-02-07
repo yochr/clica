@@ -6,21 +6,25 @@ import ButtonMakeMeeting from "./MakeMeeting"
 import { useState, useEffect } from 'react';
 import BusinnessServices from "../../store/BusinnessServices"
 import { getServices } from "../../store/server"
-
+import { render } from "react-dom"
 
 const UserHome = (observer(() => {
-  const [servicesLength, setServicesLength] = useState(null)
-  console.log(BusinnessServices.servicesList.length)
-
+  const [servicesLength, setServicesLength] = useState(0)
   useEffect(() => {
     getServices()
-    console.log(BusinnessServices.servicesList.length)
+    console.log(servicesLength)
+    // render( <UserHome {...servicesLength!=BusinnessServices.servicesList.length}/>);
 
   }, []);
+
+  
   
 
   return (
     <>
+      {servicesLength != BusinnessServices.servicesList.length ? 
+      setServicesLength(BusinnessServices.servicesList.length): console.log(servicesLength) }
+
         <HomeUp/>
         <h2>שרותים</h2>
         <SwitchService/>
