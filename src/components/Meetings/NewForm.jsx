@@ -15,7 +15,7 @@ label="שם השרות"
 type="text"
 value={name}
 variant="filled"
-color="secondary"
+color="warning"
 onChange={(e) => setName(e.target.value)}
 />
 <TextField
@@ -24,7 +24,7 @@ onChange={(e) => setName(e.target.value)}
     type="text"
     value={description}
     variant="filled"
-    color="secondary"
+    color="warning"
     onChange={(e) => setDescription(e.target.value)}
 />
 <br/>
@@ -35,7 +35,7 @@ onChange={(e) => setName(e.target.value)}
       type="text"
       value={cost}
       variant="filled"
-      color="secondary"
+      color="warning"
       onChange={(e) => setCost(e.target.value)}
 />
 
@@ -43,7 +43,7 @@ onChange={(e) => setName(e.target.value)}
 <br/>
 <Button
     variant="contained"
-    color="secondary"
+    color="warning"
     onClick={()=> SaveChanges(name, description, cost)}>
     אישור
 </Button>

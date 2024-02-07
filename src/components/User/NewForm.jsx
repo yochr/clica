@@ -33,9 +33,9 @@ const NewForm =(observer(()=>{
 
 return (<>
 <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-    <InputLabel>שם השרות</InputLabel>
+    <InputLabel  color="warning">שם השרות</InputLabel>
     <Select
-       value={chosenService} label="שם השרות"
+       value={chosenService} label="שם השרות" color="warning"
        onChange={(event) => setService(event.target.value)}>
        {names.map((name) => (<MenuItem key={name} value={name.name}> {name.name} </MenuItem> ))}
     </Select>
@@ -56,6 +56,7 @@ return (<>
       type="text"
       value={customerName}
       variant="filled"
+      color="warning"
       onChange={(e) => setCustomerName(e.target.value)}/> <br/> <br/>
 
 <TextField
@@ -64,6 +65,7 @@ return (<>
       type="text"
       value={phone}
       variant="filled"
+      color="warning"
       onChange={(e) => setPhone(e.target.value)}/> <br/> <br/>
 
 <Button
