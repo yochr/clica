@@ -11,7 +11,7 @@ const ButtonMakeMeeting =()=> {
     }
    
   return (<>
-    <Fab color="warning" aria-label="edit" sx={{position: 'fixed', left:'15px'}}>
+    <Fab color="warning" aria-label="edit" sx={{position: 'fixed', left:'25px', bottom: '25px'}} onClick={handleClick}>
         <EditCalendarIcon/>
       </Fab>
     {isClicked && <FormMakeMeeting setIsClicked={setIsClicked}/>}

@@ -5,7 +5,7 @@ import SaveChanges from "./SaveChanges‏ ";
 const NewForm =(observer(()=>{
     const [name, setName] = useState("שרות חדש");
     const [description, setDescription] = useState("...");
-    const [cost, setCost] = useState("$");
+    const [cost, setCost] = useState('ש"ח');
 
 return (
 <>
@@ -43,7 +43,7 @@ onChange={(e) => setName(e.target.value)}
 <br/>
 <Button
     variant="contained"
-    color="secondary"
+    color="warning"
     onClick={()=> SaveChanges(name, description, cost)}>
     אישור
 </Button>

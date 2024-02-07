@@ -13,7 +13,6 @@ const UserHome = (observer(() => {
   useEffect(() => {
     getServices()
     console.log(servicesLength)
-    // render( <UserHome {...servicesLength!=BusinnessServices.servicesList.length}/>);
 
   }, []);
 
@@ -26,7 +25,7 @@ const UserHome = (observer(() => {
       setServicesLength(BusinnessServices.servicesList.length): console.log(servicesLength) }
 
         <HomeUp/>
-        <Box sx={{backgroundColor: '#FEF9B4', width: '100%', height: '100vh', top: '100px', position: 'fixed', right: '0'}}>
+        <Box sx={{backgroundImage: "url('/src/img/3.jpg')", backgroundColor: '#FEF9B4', width: '100%', height: '100vh', top: '100px', position: 'fixed', right: '0'}}>
 
           <br/> <br/> <br/> <br/>
           <h2>שרותים</h2>

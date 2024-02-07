@@ -11,7 +11,7 @@ const ButtonAddService =()=> {
    
   return (  <>
     {/* {isClicked && <FormAddService />} */}
-    <Fab sx={{position: 'fixed', left:'15px'}} color="warning" aria-label="add" onClick={handleClick}>
+    <Fab sx={{position: 'fixed', left:'25px', bottom:'25px'}} color="warning" aria-label="add" onClick={handleClick}>
         <AddIcon />
     </Fab>
     {isClicked && <FormAddService setIsClicked={setIsClicked}/>}

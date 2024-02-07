@@ -6,6 +6,10 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import BusinnessServices from '../../store/BusinnessServices';
 import { observer } from 'mobx-react';
 import { useState, useEffect } from 'react';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowBackIos from '@mui/icons-material/ArrowBackIos';
+import { ArrowLeftIcon } from '@mui/x-date-pickers';
+import ArrowForwardIosTwoToneIcon from '@mui/icons-material/ArrowForwardIosTwoTone';
 
 const Services3 =(observer(()=>{
   const [activeStep, setActiveStep] = React.useState(0);
@@ -16,8 +20,8 @@ const Services3 =(observer(()=>{
   
     return (    
 <Box sx={{ width: '100vw', display: 'flex', justifyContent:'space-between' }}>
-        <Button sx={{height: '8vh', color: 'orange', backgroundColor: '#424242'}}size="small" onClick={handleBack} disabled={activeStep === 0}>  
-          <KeyboardArrowLeft /> </Button>
+        <Button sx={{height: '8vh', color: 'orange', left: '10vw'}}size="small" onClick={handleBack} disabled={activeStep === 0}>  
+          <ArrowBackIos fontSize='large'/> <ArrowBackIos fontSize='large' /></Button>
 
         <Box>
           {BusinnessServices.servicesList[activeStep].name} <br/>
@@ -34,8 +38,8 @@ const Services3 =(observer(()=>{
           {BusinnessServices.servicesList[activeStep+2].description} <br/>
           {BusinnessServices.servicesList[activeStep+2].cost} </Box>
   
-        <Button sx={{height: '8vh', color: 'orange', backgroundColor: '#424242', width:'1vw'}}  onClick={handleNext} disabled={activeStep === maxSteps - 1} >
-         <KeyboardArrowRight /> </Button>
+        <Button sx={{height: '8vh', color: 'orange', right: '10vw'}}  onClick={handleNext} disabled={activeStep === maxSteps - 1} >
+         <ArrowForwardIosTwoToneIcon fontSize='large' /> <ArrowForwardIosTwoToneIcon fontSize='large' /></Button>
       </Box>
     );
   }))

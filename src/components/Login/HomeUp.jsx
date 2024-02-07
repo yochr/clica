@@ -15,7 +15,7 @@ const ResponsiveAppBar = (observer(()=> {
         <Box height={80} sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
             <BusinessDetails/>
           </Box>
-            <img src='img/logo.jpg'/>
+            <img src='./src/img/logo1.png' style={{ height: '70px', borderRadius: '50%' }}/>
         </Toolbar>
       </Container>
     </AppBar>

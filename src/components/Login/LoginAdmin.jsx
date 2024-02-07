@@ -27,7 +27,7 @@ function LoginAdmin() {
         label="שם משתמש"
         value={username}
         variant="outlined"
-        color="secondary"
+        color="warning"
         onChange={(e) => setUsername(e.target.value)}
         />
 
@@ -40,7 +40,7 @@ function LoginAdmin() {
         value={password}
         type="password"
         variant="outlined"
-        color="secondary"
+        color="warning"
         onChange={(e) => setPassword(e.target.value)}
         />
 
@@ -49,7 +49,7 @@ function LoginAdmin() {
 
         <Button
         variant="contained"
-        color="secondary"
+        color="warning"
         onClick={handleLogin}>
         כניסה
         </Button>
