@@ -24,11 +24,11 @@ const NewForm =(observer(()=>{
   const [phone, setPhone] = useState("");
   const [chosenService, setService] = React.useState('');
   const names = BusinnessServices.servicesList;
-  let a= ""
   const handleClick = () =>{
     SaveChanges(chosenService, date, customerName, phone)
   }
 
+  let a= ""
   if (dataStore.isMakeMeeting == false) {  a = "red"}
   else{   a="" }
 
@@ -43,7 +43,6 @@ return (<>
 </FormControl>
 
 <LocalizationProvider dateAdapter={AdapterDayjs}>
-  
     <DemoContainer components={['DateTimePicker']}>
       <DateTimePicker
         id ="makeDate" label="בחר תאריך" value={date} 

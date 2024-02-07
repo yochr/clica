@@ -3,11 +3,11 @@ import BusinnessServices from "../../store/BusinnessServices";
 import Services from "./service3+";
 import Services1 from "./service1";
 import Services2 from "./service2";
-import ButtonAddService from "./AddService";
+import { useEffect, useState } from "react";
 
 const SwitchService = (observer(() =>{
-
-    const response="";
+    const [servicesLength, setServicesLength] = useState(null)
+    
     switch (BusinnessServices.servicesList.length) {
         case 0:
             return <><h3>אין שרותים זמינים</h3></>;
@@ -18,7 +18,7 @@ const SwitchService = (observer(() =>{
         case 3:
             return <Services/>
         default:
-            return <h3>הכנס שירות חדש  </h3>;
+            return <Services/>;
       }
 }))
 

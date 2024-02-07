@@ -1,5 +1,4 @@
 import{makeObservable, observable, action} from "mobx";
-
 class BusinnessServices{
     servicesList=[];
     
@@ -7,12 +6,18 @@ class BusinnessServices{
     {
         makeObservable(this,{
             servicesList:observable,
-            setServices:action
+            setServices:action,
+            getServices: action,
         }) 
     }
 
     setServices=(s)=>{
         this.servicesList = [...s];
     }
+
+    getServices = () =>{
+        
+    }
+
 }
 export default new BusinnessServices();

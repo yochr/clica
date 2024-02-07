@@ -2,6 +2,7 @@ import React from "react"
 import { observer } from "mobx-react"
 import IsEditDetails from "../BussnesData/IsEditDetails"
 import BusinnessTab from "./BusinnessTab"
+import { Outlet } from "react-router-dom"
 
 const AdminHome = (observer(() => {
 

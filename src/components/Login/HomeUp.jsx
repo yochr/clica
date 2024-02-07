@@ -4,8 +4,10 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import BusinessDetails from '../BussnesData/BusinessDetails';
-function ResponsiveAppBar() {
+import { observer } from "mobx-react"
 
+
+const ResponsiveAppBar = (observer(()=> {
   return (
     <AppBar position="fixed"  sx={{ backgroundColor: '#424242'}}>
       <Container maxWidth="xl">
@@ -18,5 +20,6 @@ function ResponsiveAppBar() {
       </Container>
     </AppBar>
   );
-}
+}))
+
 export default ResponsiveAppBar;

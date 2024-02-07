@@ -3,16 +3,18 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import ButtonAddService from './AddService';
 import BusinnessServices from '../../store/BusinnessServices';
 import { observer } from 'mobx-react';
+import { useState, useEffect } from 'react';
 
 const Services3 =(observer(()=>{
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = BusinnessServices.servicesList.length-2;
   const handleNext = () => { setActiveStep((prevActiveStep) => prevActiveStep + 1)};
   const handleBack = () => { setActiveStep((prevActiveStep) => prevActiveStep - 1)};
- 
+  const [servicesLength, setServicesLength] = useState(null)
+
+  
     return (    
 <Box sx={{ width: '80vw', display: 'flex', justifyContent:'space-between' }}>
         <Button size="small" onClick={handleBack} disabled={activeStep === 0}>  

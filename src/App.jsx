@@ -5,6 +5,7 @@ import { getBusinessData, getMeetings, getServices, setServices } from './store/
 import UserHome from './components/User/UserHome.jsx';
 import AdminPage from './components/Login/AdminPage.jsx';
 import { Outlet, Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import MyRouter from './Routs.jsx';
 
 //  setServices("meeting room","rent rooms for businness meeting","100$");
 //   setServices("science room","rent rooms Experiments","150$");
@@ -23,15 +24,7 @@ const handlePageChange = (page) => {
  getMeetings();
   
   return (
-    <Router>   
-      <main>
-      <Routes>
-          <Route path="/" element={<UserHome />} />
-          <Route path="/admin" element={<AdminPage />} />
-      </Routes>
-        <Outlet />
-      </main>
-    </Router>
+    <MyRouter/>
   );
 }
 
