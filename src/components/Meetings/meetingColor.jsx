@@ -7,13 +7,13 @@ export default function colorMeeting(dateTime) {
     if (meetingDate.getDate() === currentDate.getDate() &&
         meetingDate.getMonth() === currentDate.getMonth() &&
         meetingDate.getFullYear() === currentDate.getFullYear())
-        return 'red';
+        return '#ff5252';
 
     if(meetingDate < currentDate)
         return 'whitesmoke'
 
     if (meetingDate > currentDate && meetingDate <= lastDayOfWeek)
-        return 'orange'
+        return '#ffb74d'
 
-    return 'green';
+    return '#9ccc65';
 }

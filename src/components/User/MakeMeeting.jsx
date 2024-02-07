@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import FormMakeMeeting from './formMakeMeeting';
 import Button from '@mui/material/Button';
+import EditCalendarIcon from '@mui/icons-material/EditCalendar';
+import { Fab } from '@mui/material';
 
 const ButtonMakeMeeting =()=> {
     const [isClicked, setIsClicked] = useState(false);
@@ -9,9 +11,9 @@ const ButtonMakeMeeting =()=> {
     }
    
   return (<>
-    <Button sx={{height: '8vh', color: 'orange', backgroundColor: '#424242'}} onClick={handleClick}>
-        <h3>לקביעת פגישה</h3>
-    </Button>
+    <Fab color="warning" aria-label="edit" sx={{position: 'fixed', left:'15px'}}>
+        <EditCalendarIcon/>
+      </Fab>
     {isClicked && <FormMakeMeeting setIsClicked={setIsClicked}/>}
     </>)
     

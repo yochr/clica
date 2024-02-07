@@ -7,7 +7,6 @@ const AdminHome = (observer(() => {
 
   return (
     <>
-      <h2>AdminHome</h2>
       <BasicTabs/>
     </>
   )

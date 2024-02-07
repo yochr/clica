@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import EditBusinessDetails from './EditBusinessDetails';
+import { Fab } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
 
 function OpenDialogButton() {
   const [open, setOpen] = useState(false);
@@ -12,9 +14,9 @@ function OpenDialogButton() {
   
   return (
     <div>
-      <Button variant="inherit" onClick={handleClickOpen}>
-        עריכה
-      </Button>
+      <Fab color="warning" aria-label="edit">
+      <EditIcon />
+      </Fab>
       {open && <EditBusinessDetails setOpen={setOpen}/>}
     </div>
   );
