@@ -17,7 +17,7 @@ const Services3 =(observer(()=>{
   
     return (    
 <Box sx={{ width: '80vw', display: 'flex', justifyContent:'space-between' }}>
-        <Button size="small" onClick={handleBack} disabled={activeStep === 0}>  
+        <Button sx={{height: '8vh', color: 'orange', backgroundColor: '#424242'}}size="small" onClick={handleBack} disabled={activeStep === 0}>  
           <KeyboardArrowLeft /> Back </Button>
 
         <Box sx={{width: '20%'}}>
@@ -35,7 +35,7 @@ const Services3 =(observer(()=>{
           {BusinnessServices.servicesList[activeStep+2].description} <br/>
           {BusinnessServices.servicesList[activeStep+2].cost} </Box>
   
-        <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1} >
+        <Button sx={{height: '8vh', color: 'orange', backgroundColor: '#424242'}} size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1} >
           Next <KeyboardArrowRight /> </Button>
       </Box>
     );

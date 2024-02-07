@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import FormMakeMeeting from './formMakeMeeting';
+import Button from '@mui/material/Button';
 
 const ButtonMakeMeeting =()=> {
     const [isClicked, setIsClicked] = useState(false);
@@ -8,9 +9,9 @@ const ButtonMakeMeeting =()=> {
     }
    
   return (<>
-    <button onClick={handleClick}>
+    <Button sx={{height: '8vh', color: 'orange', backgroundColor: '#424242'}} onClick={handleClick}>
         <h3>לקביעת פגישה</h3>
-    </button>
+    </Button>
     {isClicked && <FormMakeMeeting setIsClicked={setIsClicked}/>}
     </>)
     

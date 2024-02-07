@@ -4,7 +4,7 @@ import { observer } from "mobx-react"
 import AdminHome from '../Admin/AdminHome.jsx'
 import dataStore from "../../Data/dataStore.jsx"
 import HomeUp from './HomeUp.jsx'
-import { Outlet } from "react-router-dom"
+import { Outlet, Navigate } from "react-router-dom"
 
 
 const AdminPage = (observer(() => {
@@ -12,7 +12,7 @@ const AdminPage = (observer(() => {
     return (
         <>
             <HomeUp/>
-            {!dataStore.isLogin ? <LoginAdmin /> : <AdminHome /> }
+            {!dataStore.isLogin ? <LoginAdmin /> :<><AdminHome /></>   }
         </>
     )
 }))

@@ -10,7 +10,7 @@ import { observer } from "mobx-react"
 const ResponsiveAppBar = (observer(()=> {
   return (
     <AppBar position="fixed"  sx={{ backgroundColor: '#424242'}}>
-      <Container maxWidth="xl">
+      <Container>
         <Toolbar>
         <Box height={80} sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
             <BusinessDetails/>

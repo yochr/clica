@@ -6,7 +6,7 @@ import ButtonMakeMeeting from "./MakeMeeting"
 import { useState, useEffect } from 'react';
 import BusinnessServices from "../../store/BusinnessServices"
 import { getServices } from "../../store/server"
-import { render } from "react-dom"
+import { Box } from "@mui/material"
 
 const UserHome = (observer(() => {
   const [servicesLength, setServicesLength] = useState(0)
@@ -26,10 +26,15 @@ const UserHome = (observer(() => {
       setServicesLength(BusinnessServices.servicesList.length): console.log(servicesLength) }
 
         <HomeUp/>
-        <h2>שרותים</h2>
-        <SwitchService/>
-        <br/>
-        <ButtonMakeMeeting/>
+        <Box sx={{backgroundColor: '#FEF9B4', width: '100vw', height: '100vh', top: '100px', position: 'fixed', right: '0'}}>
+
+          <br/> <br/> <br/> <br/>
+          <h2>שרותים</h2>
+          <SwitchService />
+          <br/>
+          <ButtonMakeMeeting/>
+        </Box>
+        
     </>
   )
   

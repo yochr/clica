@@ -6,7 +6,6 @@ import Services2 from "./service2";
 import { useEffect, useState } from "react";
 
 const SwitchService = (observer(() =>{
-    const [servicesLength, setServicesLength] = useState(null)
     
     switch (BusinnessServices.servicesList.length) {
         case 0:
