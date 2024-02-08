@@ -3,9 +3,7 @@ import { observer } from "mobx-react"
 import HomeUp from '../Login/HomeUp'
 import SwitchService from "../Services/switchServicesFile"
 import ButtonMakeMeeting from "./MakeMeeting"
-import { useState, useEffect } from 'react';
 import { Box } from "@mui/material"
-import AdminEdit from "../../store/AdminEdit"
 
 const UserHome = (observer(() => {
 
