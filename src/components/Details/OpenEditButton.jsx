@@ -14,9 +14,9 @@ function OpenDialogButton() {
   return (
     <div>
       <Fab color="warning" aria-label="edit" onClick={handleClickOpen}  >
-      <EditIcon />
+        <EditIcon />
       </Fab>
-      {open && <NewForm setOpen={setOpen}/>}
+      {open && <NewForm setOpen={setOpen} />}
     </div>
   );
 }

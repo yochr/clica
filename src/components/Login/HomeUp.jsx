@@ -7,15 +7,15 @@ import BusinessDetails from '../Details/Details';
 import { observer } from "mobx-react"
 
 
-const ResponsiveAppBar = (observer(()=> {
+const ResponsiveAppBar = (observer(() => {
   return (
-    <AppBar position="fixed"  sx={{ backgroundColor: '#424242'}}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#424242' }}>
       <Container>
         <Toolbar>
-        <Box height={80} sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-            <BusinessDetails/>
+          <Box height={80} sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+            <BusinessDetails />
           </Box>
-            <img src='./src/img/logo1.png' style={{ height: '70px', borderRadius: '50%' }}/>
+          <img src='./src/img/logo1.png' style={{ height: '70px', borderRadius: '50%' }} />
         </Toolbar>
       </Container>
     </AppBar>

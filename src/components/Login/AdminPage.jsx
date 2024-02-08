@@ -11,9 +11,9 @@ const AdminPage = (observer(() => {
 
     return (
         <>
-            <HomeUp/>
-            {!dataStore.isLogin ? <LoginAdmin /> :<><AdminHome /></>   }
-            <Outlet/>
+            <HomeUp />
+            {!dataStore.isLogin ? <LoginAdmin /> : <><AdminHome /></>}
+            <Outlet />
         </>
     )
 }))

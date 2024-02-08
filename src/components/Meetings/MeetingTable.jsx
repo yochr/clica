@@ -10,34 +10,33 @@ import Meetings from '../../store/Meetings';
 import colorMeeting from './meetingColor';
 import { observer } from 'mobx-react';
 
-  function createData(index, meeting) {
-    const date = meeting.dateTime;
-    const service = meeting.service;
-    const name = meeting.name;
-    const phone = meeting.phone;
-  return { index, date, service, name, phone }; }
+function createData(index, meeting) {
+  const date = meeting.dateTime;
+  const service = meeting.service;
+  const name = meeting.name;
+  const phone = meeting.phone;
+  return { index, date, service, name, phone };
+}
 
-  const getTime = (dateTime) =>
-  {
+const getTime = (dateTime) => {
   const date = new Date(dateTime);
-const formattedDate = new Intl.DateTimeFormat("en-US", {
- year: "numeric",
- month: "long",
- day: "numeric",
- hour: "numeric",
- minute: "numeric",
-}).format(date);
-return formattedDate;}
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric",
+  }).format(date);
+  return formattedDate;
+}
 
-const BasicTable =(observer(()=>{
+const BasicTable = (observer(() => {
 
-  const rows = Array.from({length: Meetings.meetingsList.length }, (_, index) => {
-    return createData(index, Meetings.meetingsList[index]); });
-    let c ="red"
+  const rows = Array.from({ length: Meetings.meetingsList.length }, (_, index) => {
+    return createData(index, Meetings.meetingsList[index]);
+  });
+
+  let c = "red"
 
   return (
-    <TableContainer component={Paper}  sx={{overflow: 'auto', height: '40vh'}}>
-      <Table sx={{ minWidth: 650}} aria-label="simple table">
+    <TableContainer component={Paper} sx={{ overflow: 'auto', height: '40vh' }}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell align="right"> טל' ליצירת קשר</TableCell>
@@ -47,16 +46,16 @@ const BasicTable =(observer(()=>{
             <TableCell align="right">מס' פגישה</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody sx={{overflow: 'auto', height: '10px'}}>
+        <TableBody sx={{ overflow: 'auto', height: '10px' }}>
           {rows.map((row) => (
             <TableRow
               key={row.index}
               {...c = colorMeeting(row.date)}
-              sx={{ '&:last-child td, &:last-child th': { border: 0} , backgroundColor: c }}>
+              sx={{ '&:last-child td, &:last-child th': { border: 0 }, backgroundColor: c }}>
               <TableCell align='right'> {row.phone} </TableCell>
               <TableCell align="right">{row.name}</TableCell>
               <TableCell align="right">{row.service}</TableCell>
-              <TableCell align="right">{getTime (row.date)}</TableCell>
+              <TableCell align="right">{getTime(row.date)}</TableCell>
               <TableCell align="right">{row.index}</TableCell>
             </TableRow>
           ))}
@@ -64,5 +63,5 @@ const BasicTable =(observer(()=>{
       </Table>
     </TableContainer>
   );
- }))
- export default  BasicTable;
+}))
+export default BasicTable;

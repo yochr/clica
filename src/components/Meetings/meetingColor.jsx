@@ -9,7 +9,7 @@ export default function colorMeeting(dateTime) {
         meetingDate.getFullYear() === currentDate.getFullYear())
         return '#ff5252';
 
-    if(meetingDate < currentDate)
+    if (meetingDate < currentDate)
         return 'whitesmoke'
 
     if (meetingDate > currentDate && meetingDate <= lastDayOfWeek)

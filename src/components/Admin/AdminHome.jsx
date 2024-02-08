@@ -9,10 +9,10 @@ const AdminHome = (observer(() => {
 
   return (
     <>
-    <Box sx={{backgroundImage: "url('/src/img/3.jpg')", backgroundColor: '#FEF9B4', width: '100%', height: '100vh', top: '100px', position: 'fixed', right: '0'}}>
-    <br/> <br/> <br/> <br/>
-    <BusinnessTab/>
-    </Box>
+      <Box sx={{ backgroundImage: "url('/src/img/3.jpg')", backgroundColor: '#FEF9B4', width: '100%', height: '100vh', top: '100px', position: 'fixed', right: '0' }}>
+        <br /> <br /> <br /> <br />
+        <BusinnessTab />
+      </Box>
     </>
   )
 }))

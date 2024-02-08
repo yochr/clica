@@ -1,7 +1,7 @@
-import {setMeetings, getMeetings} from "../../store/server";
+import { setMeetings, getMeetings } from "../../store/server";
 
-export   default async function  SaveChanges(service,date, name, phone){
-    const res =  await setMeetings(service, date, name, phone);
+export default async function SaveChanges(service, date, name, phone) {
+    const res = await setMeetings(service, date, name, phone);
     alert(res);
-    getMeetings();      
+    getMeetings();
 }
