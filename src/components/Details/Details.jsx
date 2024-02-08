@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import OpenDialogButton from "./OpenEditButton";
 
 
-
 const BusinessDetails = (observer(() => {
     const [isActive, setIsActive] = useState(false);
 
