@@ -23,7 +23,7 @@ const NewForm = (observer(({ setIsClicked }) => {
   const [date, setDate] = useState(dayjs('2024-02-03T00:00'));
   const [customerName, setCustomerName] = useState("");
   const [phone, setPhone] = useState("");
-  const [chosenService, setService] = React.useState('');
+  const [chosenService, setService] = useState('');
   const names = BusinnessServices.servicesList;
   const handleClick = () => { SaveChanges(chosenService, date, customerName, phone) }
   const handleClose = () => { setIsClicked(false); };
