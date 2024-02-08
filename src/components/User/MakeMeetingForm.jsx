@@ -13,10 +13,10 @@ import Select from '@mui/material/Select';
 
 import SaveChanges from "./SaveChanges‏ ";
 import BusinnessServices from '../../store/BusinnessServices';
-import dataStore from "../../Data/dataStore";
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
+import dataStore from "../../Data/dataStore";
 
 const NewForm = (observer(({ setIsClicked }) => {
 
@@ -26,7 +26,6 @@ const NewForm = (observer(({ setIsClicked }) => {
   const [chosenService, setService] = React.useState('');
   const names = BusinnessServices.servicesList;
   const handleClick = () => { SaveChanges(chosenService, date, customerName, phone) }
-
   const handleClose = () => { setIsClicked(false); };
 
   let a = ""
