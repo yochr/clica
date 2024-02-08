@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import Button from '@mui/material/Button';
-import EditBusinessDetails from './EditBusinessDetails';
 import { Fab } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
+import NewForm from './EditDetailsForm';
 
 function OpenDialogButton() {
   const [open, setOpen] = useState(false);
@@ -11,13 +10,13 @@ function OpenDialogButton() {
     setOpen(true);
   };
 
-  
+
   return (
     <div>
       <Fab color="warning" aria-label="edit" onClick={handleClickOpen}  >
       <EditIcon />
       </Fab>
-      {open && <EditBusinessDetails setOpen={setOpen}/>}
+      {open && <NewForm setOpen={setOpen}/>}
     </div>
   );
 }

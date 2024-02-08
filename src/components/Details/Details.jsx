@@ -3,11 +3,9 @@ import React, { useState } from 'react';
 import { observer } from "mobx-react"
 import dataStore from "../../Data/dataStore";
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import ButtonEdit from "./ButtonEdit";
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';  
+import OpenDialogButton from "./OpenEditButton";
+
 
 
 const BusinessDetails = (observer(() => {
@@ -16,7 +14,7 @@ const BusinessDetails = (observer(() => {
   return (
       <>
 
-      {!dataStore.isLogin ? "" : <ButtonEdit />}
+      {!dataStore.isLogin ? "" : <OpenDialogButton/>}
 
       <Box sx={{ display: 'flex'}}>
       <Typography sx={{ marginLeft: '10px' }}>{AdminEdit.email} </Typography>
